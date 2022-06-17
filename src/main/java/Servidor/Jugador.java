@@ -5,6 +5,12 @@ public class Jugador {
     private String nombre;
     private int puntaje;
 
+    public Jugador(int id, String nombre, int puntaje) {
+        this.id = id;
+        this.nombre = nombre;
+        this.puntaje = puntaje;
+    }
+
     public int actualizarPuntaje(int puntaje){
         return puntaje;
     }
