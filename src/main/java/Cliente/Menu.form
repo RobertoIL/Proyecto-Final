@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Cliente.Menu">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+    <constraints>
+      <xy x="20" y="20" width="663" height="800"/>
+    </constraints>
+    <properties>
+      <background color="-16686736"/>
+      <font name="Comic Sans MS" size="18"/>
+      <foreground color="-16777216"/>
+      <minimumSize width="600" height="800"/>
+      <opaque value="true"/>
+      <preferredSize width="420" height="400"/>
+      <requestFocusEnabled value="true"/>
+    </properties>
+    <border type="bevel-lowered"/>
+    <children>
+      <component id="41a85" class="javax.swing.JLabel" binding="nombreUsuarioLabel">
+        <constraints/>
+        <properties>
+          <font name="Comic Sans MS" size="18"/>
+          <text value="Nombre Usuario"/>
+        </properties>
+      </component>
+      <component id="8db19" class="javax.swing.JTextField" binding="jugadorTextField" default-binding="true">
+        <constraints/>
+        <properties>
+          <columns value="20"/>
+          <horizontalAlignment value="0"/>
+          <text value="jugador"/>
+        </properties>
+      </component>
+      <component id="23a84" class="javax.swing.JLabel" binding="hostNameLabel">
+        <constraints/>
+        <properties>
+          <font name="Comic Sans MS" size="18"/>
+          <text value="Host Name"/>
+        </properties>
+      </component>
+      <component id="d81cd" class="javax.swing.JTextField" binding="HOSTTextField" default-binding="true">
+        <constraints/>
+        <properties>
+          <columns value="25"/>
+          <horizontalAlignment value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="4f9d6" class="javax.swing.JLabel" binding="puertoLabel">
+        <constraints/>
+        <properties>
+          <font name="Comic Sans MS" size="18"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <text value=" Puerto"/>
+        </properties>
+      </component>
+      <component id="d02d0" class="javax.swing.JTextField" binding="puertoTextField" default-binding="true">
+        <constraints/>
+        <properties>
+          <columns value="25"/>
+          <horizontalAlignment value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="50e3b" class="javax.swing.JButton" binding="ingresarButton" default-binding="true">
+        <constraints/>
+        <properties>
+          <font name="Comic Sans MS" size="18"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <text value="Ingresar"/>
+        </properties>
+      </component>
+      <component id="4f5cf" class="javax.swing.JButton" binding="salirButton" default-binding="true">
+        <constraints/>
+        <properties>
+          <font name="Comic Sans MS" size="18"/>
+          <text value="Salir"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

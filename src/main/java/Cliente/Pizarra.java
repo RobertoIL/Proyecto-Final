@@ -1,13 +1,11 @@
-package Servidor;
+package Cliente;
 
 import java.awt.*;
 import java.awt.event.*;
 
 public class Pizarra  extends Canvas implements MouseListener, MouseMotionListener, KeyListener {
-
     int x=-1, y=-1, x2 =-1, y2=-1;
     boolean nnw = false;
-
 
     public Pizarra(){
         addKeyListener(this);
@@ -28,18 +26,21 @@ public class Pizarra  extends Canvas implements MouseListener, MouseMotionListen
             g0.fillRect(-10,-10,600,600);
         }
     }
+    @Override
+    public void keyTyped(KeyEvent e) {
+    }
 
     @Override
-    public void keyTyped(KeyEvent e) {}
+    public void keyPressed(KeyEvent e) {
+    }
 
     @Override
-    public void keyPressed(KeyEvent e) {}
+    public void keyReleased(KeyEvent e) {
+    }
 
     @Override
-    public void keyReleased(KeyEvent e) {}
-
-    @Override
-    public void mouseClicked(MouseEvent e) {}
+    public void mouseClicked(MouseEvent e) {
+    }
 
     @Override
     public void mousePressed(MouseEvent e) {
@@ -55,10 +56,12 @@ public class Pizarra  extends Canvas implements MouseListener, MouseMotionListen
     }
 
     @Override
-    public void mouseEntered(MouseEvent e) {}
+    public void mouseEntered(MouseEvent e) {
+    }
 
     @Override
-    public void mouseExited(MouseEvent e) {}
+    public void mouseExited(MouseEvent e) {
+    }
 
     @Override
     public void mouseDragged(MouseEvent e) {
@@ -70,10 +73,7 @@ public class Pizarra  extends Canvas implements MouseListener, MouseMotionListen
     }
 
     @Override
-    public void mouseMoved(MouseEvent e) {}
-
-
-
-
+    public void mouseMoved(MouseEvent e) {
+    }
 
 }
