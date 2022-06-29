@@ -18,7 +18,7 @@ public class Conexion {
         else {
             cs = new Socket();
         }
-        System.out.println("hola mundo");
+
     }
 
 }
