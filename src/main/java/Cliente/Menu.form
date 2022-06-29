@@ -6,7 +6,7 @@
     </constraints>
     <properties>
       <background color="-16686736"/>
-      <font name="Comic Sans MS" size="18"/>
+      <font name="Showcard Gothic" size="18"/>
       <foreground color="-16777216"/>
       <minimumSize width="600" height="800"/>
       <opaque value="true"/>
@@ -18,22 +18,26 @@
       <component id="41a85" class="javax.swing.JLabel" binding="nombreUsuarioLabel">
         <constraints/>
         <properties>
-          <font name="Comic Sans MS" size="18"/>
+          <enabled value="true"/>
+          <font name="Copperplate Gothic Bold" size="18"/>
+          <foreground color="-16777216"/>
           <text value="Nombre Usuario"/>
         </properties>
       </component>
       <component id="8db19" class="javax.swing.JTextField" binding="jugadorTextField" default-binding="true">
         <constraints/>
         <properties>
-          <columns value="20"/>
+          <columns value="25"/>
           <horizontalAlignment value="0"/>
-          <text value="jugador"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="23a84" class="javax.swing.JLabel" binding="hostNameLabel">
         <constraints/>
         <properties>
-          <font name="Comic Sans MS" size="18"/>
+          <enabled value="true"/>
+          <font name="Copperplate Gothic Bold" size="18"/>
+          <foreground color="-16777216"/>
           <text value="Host Name"/>
         </properties>
       </component>
@@ -48,7 +52,9 @@
       <component id="4f9d6" class="javax.swing.JLabel" binding="puertoLabel">
         <constraints/>
         <properties>
-          <font name="Comic Sans MS" size="18"/>
+          <enabled value="true"/>
+          <font name="Copperplate Gothic Bold" size="18"/>
+          <foreground color="-16777216"/>
           <horizontalAlignment value="0"/>
           <horizontalTextPosition value="0"/>
           <text value=" Puerto"/>
@@ -58,6 +64,7 @@
         <constraints/>
         <properties>
           <columns value="25"/>
+          <foreground color="-16777216"/>
           <horizontalAlignment value="0"/>
           <text value=""/>
         </properties>
@@ -65,7 +72,7 @@
       <component id="50e3b" class="javax.swing.JButton" binding="ingresarButton" default-binding="true">
         <constraints/>
         <properties>
-          <font name="Comic Sans MS" size="18"/>
+          <font name="Impact" size="18"/>
           <horizontalAlignment value="0"/>
           <horizontalTextPosition value="0"/>
           <text value="Ingresar"/>
@@ -74,7 +81,7 @@
       <component id="4f5cf" class="javax.swing.JButton" binding="salirButton" default-binding="true">
         <constraints/>
         <properties>
-          <font name="Comic Sans MS" size="18"/>
+          <font name="Impact" size="18"/>
           <text value="Salir"/>
         </properties>
       </component>
