@@ -9,9 +9,9 @@ public class Main {
             public void run() {
                 JFrame frame = new Menu();
                 frame.setSize(300, 300);
+                frame.setLocationRelativeTo(null);
                 frame.setVisible(true);
             }
         });
     }
-
 }
