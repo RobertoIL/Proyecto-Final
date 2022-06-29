@@ -30,7 +30,7 @@ public class Menu extends JFrame {
         salirButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+            System.exit(1);
             }
         });
         jugadorTextField.addActionListener(new ActionListener() {
