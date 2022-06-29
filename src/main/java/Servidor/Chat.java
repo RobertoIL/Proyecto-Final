@@ -1,4 +1,17 @@
 package Servidor;
 
-public class Chat {
+public class Chat extends Thread {
+
+
+
+
+    public static void actualizarChat(){
+        /*
+
+
+
+
+
+         */
+    }
 }
