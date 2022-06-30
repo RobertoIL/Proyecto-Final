@@ -7,7 +7,11 @@ import java.net.Socket;
 public class Conexion {
 
 
-    protected ServerSocket ss;
+
+
+
+    //codigo original
+   protected ServerSocket ss;
     protected Socket cs;
 
     public Conexion(String tipo) throws IOException{
