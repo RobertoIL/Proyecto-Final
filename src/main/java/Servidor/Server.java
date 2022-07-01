@@ -1,8 +1,4 @@
 package Servidor;
-
-
-
-
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -11,7 +7,7 @@ import java.util.Observable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/*public class Server extends Observable implements Runnable {
+public class Server extends Observable implements Runnable {
 
     private int puerto;
 
@@ -42,7 +38,7 @@ import java.util.logging.Logger;
                 System.out.println(mensaje);
 
                 this.setChanged();
-                this.notifyObservers(mensaje);
+                this.notifyObservers(mensaje);//muestra mensaje enviado por jugadores
                 this.clearChanged();
 
                 sc.close();
@@ -56,8 +52,8 @@ import java.util.logging.Logger;
 
     }
 
-}*/
-
+}
+/*
 //codigo original
 import Cliente.Conexion;
 
@@ -80,6 +76,6 @@ public class Server extends Conexion {
         }
     }
 }
-
+*/
 
 
