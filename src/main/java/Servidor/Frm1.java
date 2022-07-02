@@ -8,7 +8,6 @@ public class Frm1 extends javax.swing.JFrame implements Observer {
         initComponents();
         this.getRootPane().setDefaultButton(this.btnEnviar);
         Server s = new Server(5000);
-        s.addObserver(this);
         Thread t = new Thread(s);
         t.start();
     }

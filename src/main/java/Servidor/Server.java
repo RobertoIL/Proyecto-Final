@@ -3,16 +3,18 @@ import java.io.DataInputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.Observable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Server extends Observable implements Runnable {
-
+public class Server implements Runnable {
+    private ArrayList<Socket> clientes;//arreglo de jugadores aqui se conectaran los jugadores
     private int puerto;
 
     public Server(int puerto) {
-        this.puerto = puerto;
+        this.puerto = puerto;//puerto de cada jugador
+        this.clientes=new ArrayList<>();//creacion de nuevos clientes jugadores
     }
 
     @Override
@@ -29,20 +31,10 @@ public class Server extends Observable implements Runnable {
             while (true) {
 
                 sc = server.accept();
+                System.out.println("CLiente conectado");
+            clientes.add(sc);//se agrega un nuevo cliente
 
-                System.out.println("Cliente conectado");
-                in = new DataInputStream(sc.getInputStream());
 
-                String mensaje = in.readUTF();
-
-                System.out.println(mensaje);
-
-                this.setChanged();
-                this.notifyObservers(mensaje);//muestra mensaje enviado por jugadores
-                this.clearChanged();
-
-                sc.close();
-                System.out.println("Cliente desconectado");
 
             }
 
