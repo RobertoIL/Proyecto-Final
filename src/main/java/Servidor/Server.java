@@ -44,6 +44,8 @@ public class Server implements Runnable {
 
     }
 
+    public void addObserver(Frm2 frm2) {
+    }
 }
 /*
 //codigo original
