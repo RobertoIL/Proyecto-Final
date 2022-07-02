@@ -23,6 +23,11 @@
             <artifactId>junit-vintage-engine</artifactId>
             <version>5.8.2</version>
         </dependency>
+        <dependency>
+            <groupId>org.netbeans.external</groupId>
+            <artifactId>AbsoluteLayout</artifactId>
+            <version>RELEASE140</version>
+        </dependency>
     </dependencies>
 
 </project>
