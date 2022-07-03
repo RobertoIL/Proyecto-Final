@@ -4,6 +4,9 @@
  */
 package Cliente;
 
+import java.io.IOException;
+import java.util.Objects;
+
 /**
  *
  * @author rober
@@ -13,7 +16,8 @@ public class Juegoform extends javax.swing.JFrame {
     /**
      * Creates new form Juegoform
      */
-    public Juegoform() {
+
+    public Juegoform() throws IOException{
         initComponents();
     }
 
@@ -24,7 +28,7 @@ public class Juegoform extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
-    private void initComponents() {
+    private void initComponents() throws IOException {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -180,7 +184,7 @@ public class Juegoform extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 1020, 250));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/background.png"))); // NOI18N
+        //jLabel1.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/imagenes/background.jpg")))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -208,6 +212,8 @@ public class Juegoform extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+
+ //aqui iba el main
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -234,11 +240,16 @@ public class Juegoform extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Juegoform().setVisible(true);
+            public void run()  {
+                try {
+                    new Juegoform().setVisible(true);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
     }
+
 
     // Variables declaration - do not modify
     private javax.swing.JButton jButton1;

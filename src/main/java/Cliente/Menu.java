@@ -4,6 +4,9 @@
  */
 package Cliente;
 
+import javax.swing.*;
+import java.awt.*;
+
 /**
  *
  * @author rober
@@ -13,7 +16,9 @@ public class Menu extends javax.swing.JFrame {
     /**
      * Creates new form Menu
      */
+    imagenFondo imgFondo = new imagenFondo();
     public Menu() {
+        this.setContentPane(imgFondo);
         initComponents();
     }
 
@@ -42,7 +47,7 @@ public class Menu extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/portada.jpg"))); // NOI18N
+        //jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/src/portada.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 530));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -195,4 +200,16 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
+
+    class imagenFondo extends JPanel {
+        private Image imagen;
+
+        public void paint(Graphics g){
+            imagen = new ImageIcon(getClass().getResource("/src/portada.jpg")).getImage();
+            g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+            setOpaque(false);
+            super.paint(g);
+        }
+
+    }
 }
