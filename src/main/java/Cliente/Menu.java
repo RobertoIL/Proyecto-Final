@@ -158,7 +158,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void salirMenu(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirMenu
-        // TODO add your handling code here:
+        System.exit(1);
     }//GEN-LAST:event_salirMenu
 
     private void ingresarJuego(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresarJuego

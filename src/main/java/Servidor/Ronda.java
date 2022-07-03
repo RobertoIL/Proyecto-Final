@@ -1,9 +1,10 @@
 package Servidor;
 
-import Cliente.Jugador;
+public interface Ronda {
+    String palabra = "";
+    Jugador jugadorDibujante = null;
 
-public class Ronda {
-    private String palabra;
-    private Jugador jugador;
-    
+
+
+
 }
