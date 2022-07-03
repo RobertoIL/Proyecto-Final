@@ -128,7 +128,7 @@ public class Juegoform extends javax.swing.JFrame {
 
         jPanel1.add(Pizarra_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, 740, 400));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\rober\\Documents\\NetBeansProjects\\Proyecto-Final\\src\\main\\resources\\imgs\\background.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("src/main/resources/imgs/background.jpg")); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 500));
 
         jTextArea1.setColumns(20);
