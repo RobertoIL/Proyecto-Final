@@ -27,17 +27,17 @@ public class Juegoform extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        Herramientas_pintor_panel = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         Pizarra_panel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        Herramientas_pintor_panel = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
@@ -50,48 +50,38 @@ public class Juegoform extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Pizarra_panel.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout Pizarra_panelLayout = new javax.swing.GroupLayout(Pizarra_panel);
-        Pizarra_panel.setLayout(Pizarra_panelLayout);
-        Pizarra_panelLayout.setHorizontalGroup(
-            Pizarra_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 740, Short.MAX_VALUE)
-        );
-        Pizarra_panelLayout.setVerticalGroup(
-            Pizarra_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(Pizarra_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, 740, 400));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("src/main/resources/imgs/background.jpg")); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 500));
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
-
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 500, 340, 170));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 680, 250, -1));
-
-        jButton1.setBackground(new java.awt.Color(204, 255, 204));
-        jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
-        jButton1.setText("ENVIAR");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 680, -1, 20));
-
         Herramientas_pintor_panel.setBackground(new java.awt.Color(204, 255, 204));
         Herramientas_pintor_panel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lapizNegro(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(51, 51, 255));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lapizAzul(evt);
+            }
+        });
 
         jButton4.setBackground(new java.awt.Color(255, 0, 0));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lapizRojo(evt);
+            }
+        });
 
         jButton5.setBackground(new java.awt.Color(204, 204, 204));
         jButton5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         jButton5.setText("BORRAR TODO");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limpiarPizarra(evt);
+            }
+        });
 
         javax.swing.GroupLayout Herramientas_pintor_panelLayout = new javax.swing.GroupLayout(Herramientas_pintor_panel);
         Herramientas_pintor_panel.setLayout(Herramientas_pintor_panelLayout);
@@ -112,15 +102,51 @@ public class Juegoform extends javax.swing.JFrame {
             Herramientas_pintor_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Herramientas_pintor_panelLayout.createSequentialGroup()
                 .addContainerGap(23, Short.MAX_VALUE)
-                .addGroup(Herramientas_pintor_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(Herramientas_pintor_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21))
         );
 
         jPanel1.add(Herramientas_pintor_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 500, 410, 70));
+
+        Pizarra_panel.setBackground(new java.awt.Color(255, 255, 255));
+        Pizarra_panel.setBorder(new javax.swing.border.MatteBorder(null));
+
+        javax.swing.GroupLayout Pizarra_panelLayout = new javax.swing.GroupLayout(Pizarra_panel);
+        Pizarra_panel.setLayout(Pizarra_panelLayout);
+        Pizarra_panelLayout.setHorizontalGroup(
+            Pizarra_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 738, Short.MAX_VALUE)
+        );
+        Pizarra_panelLayout.setVerticalGroup(
+            Pizarra_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 398, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(Pizarra_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, 740, 400));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\rober\\Documents\\NetBeansProjects\\Proyecto-Final\\src\\main\\resources\\imgs\\background.jpg")); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 500));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 500, 340, 170));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 680, 250, -1));
+
+        jButton1.setBackground(new java.awt.Color(204, 255, 204));
+        jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        jButton1.setText("ENVIAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enviarChat(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 680, -1, 20));
 
         jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -167,6 +193,26 @@ public class Juegoform extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void enviarChat(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarChat
+        // TODO add your handling code here:
+    }//GEN-LAST:event_enviarChat
+
+    private void lapizNegro(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lapizNegro
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lapizNegro
+
+    private void lapizAzul(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lapizAzul
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lapizAzul
+
+    private void lapizRojo(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lapizRojo
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lapizRojo
+
+    private void limpiarPizarra(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarPizarra
+        // TODO add your handling code here:
+    }//GEN-LAST:event_limpiarPizarra
 
     /**
      * @param args the command line arguments

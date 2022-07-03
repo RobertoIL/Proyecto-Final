@@ -49,7 +49,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 530));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("src/main/resources/imgs/portada.jpg")); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\rober\\Documents\\NetBeansProjects\\Proyecto-Final\\src\\main\\resources\\imgs\\portada.jpg")); // NOI18N
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -69,14 +69,21 @@ public class Menu extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabel4.setText("PUERTO");
 
+        jButton1.setBackground(new java.awt.Color(204, 255, 255));
         jButton1.setText("INGRESAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ingresarJuego(evt);
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(204, 255, 255));
         jButton2.setText("SALIR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salirMenu(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -146,13 +153,17 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void salirMenu(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirMenu
+        // TODO add your handling code here:
+    }//GEN-LAST:event_salirMenu
+
+    private void ingresarJuego(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresarJuego
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ingresarJuego
 
     /**
      * @param args the command line arguments
