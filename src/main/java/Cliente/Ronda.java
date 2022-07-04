@@ -1,12 +1,14 @@
 package Cliente;
 
-import java.util.ArrayList;
+public interface Ronda {
+    String palabra = "";
+    Jugador jugadorDibujante = null;
 
-public class Ronda {
-    private String palabra;
-    private int tiempo;  //encontrar un tipo de dato mejor para el tiempo
-    private Jugador jugador_turno;
-    ArrayList<Jugador> jugadores_adivinadores = new ArrayList<>();
-    ArrayList<Jugador> puntajeJugadores = new ArrayList<>();
+    default void finalizarRound(){}
+
+    default boolean jugadorAdivina(){
+        return true;
+    }
+
 
 }
