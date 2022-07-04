@@ -4,6 +4,11 @@
  */
 package Client;
 
+import java.awt.BasicStroke;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+
 /**
  *
  * @author rober
@@ -76,6 +81,7 @@ public class Juegoform extends javax.swing.JFrame {
 
         jButton5.setBackground(new java.awt.Color(204, 204, 204));
         jButton5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(0, 0, 0));
         jButton5.setText("BORRAR TODO");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,6 +120,42 @@ public class Juegoform extends javax.swing.JFrame {
 
         Pizarra_panel.setBackground(new java.awt.Color(255, 255, 255));
         Pizarra_panel.setBorder(new javax.swing.border.MatteBorder(null));
+        Pizarra_panel.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                Pizarra_panelMouseDragged(evt);
+            }
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                Pizarra_panelMouseMoved(evt);
+            }
+        });
+        Pizarra_panel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Pizarra_panelMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Pizarra_panelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Pizarra_panelMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Pizarra_panelMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                Pizarra_panelMouseReleased(evt);
+            }
+        });
+        Pizarra_panel.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                Pizarra_panelKeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                Pizarra_panelKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Pizarra_panelKeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout Pizarra_panelLayout = new javax.swing.GroupLayout(Pizarra_panel);
         Pizarra_panel.setLayout(Pizarra_panelLayout);
@@ -128,18 +170,24 @@ public class Juegoform extends javax.swing.JFrame {
 
         jPanel1.add(Pizarra_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, 740, 400));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("src/main/resources/imgs/background.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\rober\\Documents\\NetBeansProjects\\Proyecto-Final\\src\\main\\resources\\imgs\\background.jpg")); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 500));
 
+        jTextArea1.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea1.setColumns(20);
+        jTextArea1.setForeground(new java.awt.Color(0, 0, 0));
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 500, 340, 170));
+
+        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 680, 250, -1));
 
         jButton1.setBackground(new java.awt.Color(204, 255, 204));
         jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("ENVIAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,8 +196,12 @@ public class Juegoform extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 680, -1, 20));
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
+        jTextPane1.setBackground(new java.awt.Color(255, 255, 255));
+        jTextPane1.setForeground(new java.awt.Color(0, 0, 0));
         jScrollPane2.setViewportView(jTextPane1);
         jTextPane1.getAccessibleContext().setAccessibleDescription("Palabra");
 
@@ -172,11 +224,14 @@ public class Juegoform extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 590, 320, 60));
 
+        jTextPane2.setBackground(new java.awt.Color(255, 255, 255));
+        jTextPane2.setForeground(new java.awt.Color(0, 0, 0));
         jScrollPane3.setViewportView(jTextPane2);
 
         jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, 100, 40));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("TIEMPO");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 510, -1, -1));
 
@@ -199,20 +254,68 @@ public class Juegoform extends javax.swing.JFrame {
     }//GEN-LAST:event_enviarChat
 
     private void lapizNegro(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lapizNegro
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_lapizNegro
 
     private void lapizAzul(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lapizAzul
-        // TODO add your handling code here:
+        //dibujar.setColor(Color.BLUE);
+        
     }//GEN-LAST:event_lapizAzul
 
     private void lapizRojo(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lapizRojo
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_lapizRojo
 
     private void limpiarPizarra(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarPizarra
         // TODO add your handling code here:
     }//GEN-LAST:event_limpiarPizarra
+
+    private void Pizarra_panelKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Pizarra_panelKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pizarra_panelKeyTyped
+
+    private void Pizarra_panelKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Pizarra_panelKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pizarra_panelKeyPressed
+
+    private void Pizarra_panelKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Pizarra_panelKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pizarra_panelKeyReleased
+
+    private void Pizarra_panelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pizarra_panelMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pizarra_panelMouseClicked
+
+    private void Pizarra_panelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pizarra_panelMousePressed
+        x=evt.getX();
+        y=evt.getY();
+        dibujar(this.getGraphics());
+    }//GEN-LAST:event_Pizarra_panelMousePressed
+
+    private void Pizarra_panelMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pizarra_panelMouseReleased
+        x=-1;
+        x2=-1;
+    }//GEN-LAST:event_Pizarra_panelMouseReleased
+
+    private void Pizarra_panelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pizarra_panelMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pizarra_panelMouseEntered
+
+    private void Pizarra_panelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pizarra_panelMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pizarra_panelMouseExited
+
+    private void Pizarra_panelMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pizarra_panelMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pizarra_panelMouseMoved
+
+    private void Pizarra_panelMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pizarra_panelMouseDragged
+        x2=evt.getX();
+        y2=evt.getY();
+        dibujar(this.getGraphics());
+        x=x2;
+        y=y2;
+    }//GEN-LAST:event_Pizarra_panelMouseDragged
 
     /**
      * @param args the command line arguments
@@ -247,6 +350,25 @@ public class Juegoform extends javax.swing.JFrame {
                 new Juegoform().setVisible(true);
             }
         });
+    }
+    
+    //variables para metodo de dibujar
+    int x=-1, y=-1, x2 =-1, y2=-1;
+    boolean nnw = false;
+    
+    //metodo para didbujar
+    public void dibujar(Graphics g){
+        Graphics2D g0 = (Graphics2D) g;
+        g0.setStroke(new BasicStroke(2));
+        g0.setColor(Color.black);
+
+        if (x2 != -1 && x != -1){
+            g0.drawLine(x,y,x2,y2);
+
+        }if (nnw){
+            g0.setColor(Color.white);
+            g0.fillRect(-10,-10,600,600);
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
