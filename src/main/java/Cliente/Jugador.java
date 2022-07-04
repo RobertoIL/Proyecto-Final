@@ -5,10 +5,8 @@ public class Jugador {
     private int id;
     private int puntaje;
 
-    public Jugador(String nombre, int id, int puntaje) {
+    public Jugador(String nombre) {
         this.nombre = nombre;
-        this.id = id;
-        this.puntaje = puntaje;
     }
 
     public String getNombre() {

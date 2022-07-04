@@ -11,10 +11,22 @@ public class Juego {
     List<String> palabras = new ArrayList<>();
 
     public static void main(String[] args) {
-        
-        
 
-        
+        //menu
+        //construye y el host listo
+
+        //puerto listo
+
+        //se mete a la sala(conectado a chat) listo
+        //comienza jugar
+        //mostrarpizarrapintor
+        //ganador metodo verificador
+
+        //se declara ganador
+
+        //reinicio juego
+        //mensaje
+
 
 
     }

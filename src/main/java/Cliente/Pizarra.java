@@ -13,6 +13,7 @@ public class Pizarra  extends Canvas implements MouseListener, MouseMotionListen
         addMouseMotionListener(this);
         setBackground(Color.white);
     }
+
     public void dibujar(Graphics g){
         Graphics2D g0 = (Graphics2D) g;
         g0.setStroke(new BasicStroke(2));
@@ -26,6 +27,7 @@ public class Pizarra  extends Canvas implements MouseListener, MouseMotionListen
             g0.fillRect(-10,-10,600,600);
         }
     }
+
     @Override
     public void keyTyped(KeyEvent e) {
     }
