@@ -19,6 +19,11 @@ public class Menu extends javax.swing.JFrame {
     public Menu() {
     
         initComponents();
+    
+    
+    
+    
+    
     }
 
     /**
@@ -162,12 +167,13 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_salirMenu
 
     private void ingresarJuego(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresarJuego
-        String nombre;// TODO add your handling code here:
+         String nombre;
         String host;
-        int puerto;
+         int puertoc;
         nombre=jTextField1.getText();
-        host=jTextField2.getText();
-        puerto=jTextField3.Integer;
+        host=jTextField2.getText(); 
+        puertoc=Integer.parseInt(jTextField3.getText());
+        new Jugador(nombre,host,puertoc);
     }//GEN-LAST:event_ingresarJuego
 
     /**

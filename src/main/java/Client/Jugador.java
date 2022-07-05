@@ -20,14 +20,14 @@ private Socket cliente;
     private DataOutputStream salida;
     private String nombre;
   
-    public Jugador() {
+    public Jugador(String nombre,String host,int puertoc) {
         initComponents();
                try {
-            nombre=JOptionPane.showInputDialog("su nombre");
-            super.setTitle(super.getTitle()+nombre);
-            super.setVisible(true);
+          
             cliente=new Socket(host,puertoc);
             DataOutputStream salida=new DataOutputStream(cliente.getOutputStream());
+              super.setTitle(super.getTitle()+nombre);
+            super.setVisible(true);
             salida.writeUTF(nombre);
             HiloCliente hilo=new HiloCliente(cliente,this);
             hilo.start();
@@ -39,11 +39,7 @@ private Socket cliente;
     public void mensajeria(String msg){
         this.jTextArea1.append(" "+msg+"\n");
     }
-    public Jugador(String nombre, String host, int puertoc){//constructor
-        this.nombre=nombre;
-        this.host=host;
-        this.puertoc=puertoc;
-                }
+  
 
 
     @SuppressWarnings("unchecked")
@@ -157,13 +153,7 @@ public void actualizarLista(DefaultListModel modelo){
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Scanner entrada= new Scanner(System.in);
-                String nombre;
-                String host;
-                String puerto;
-                System.out.println("Ingrese su nombre");
-                nombre=entrada.nextLine();
-                System.out.println("Ingrese un host");
+               
                 new Jugador().setVisible(true);
             }
         });
