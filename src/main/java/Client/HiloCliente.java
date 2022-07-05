@@ -1,7 +1,7 @@
 package Client;
 
 
-import Client.Cliente;
+import Client.Jugador;
 import javax.swing.*;
 import java.io.DataInputStream;
 import java.io.IOException;
@@ -13,22 +13,22 @@ import java.util.logging.Logger;
 public class HiloCliente extends Thread {
 private Socket SocketCliente;
 private DataInputStream entrada;
-private Cliente cliente;
+private Jugador jugador;
 private ObjectInputStream entradaObjeto;
 
-public HiloCliente(Socket SocketCliente, Cliente cliente){
+public HiloCliente(Socket SocketCliente, Jugador cliente){
     this.SocketCliente=SocketCliente;
-    this.cliente=cliente;
+    this.jugador=cliente;
 }
 
 public void run(){//hilo de cliente en linea
     while (true){
         try {
             entrada=new DataInputStream(SocketCliente.getInputStream());
-            cliente.mensajeria(entrada.readUTF());
+            jugador.mensajeria(entrada.readUTF());
 
             entradaObjeto=new ObjectInputStream(SocketCliente.getInputStream());
-            cliente.actualizarLista((DefaultListModel) entradaObjeto.readObject());
+            jugador.actualizarLista((DefaultListModel) entradaObjeto.readObject());
 
         }catch (ClassNotFoundException ex){
             Logger.getLogger(HiloCliente.class.getName()).log(Level.SEVERE,null,ex);

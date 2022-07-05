@@ -5,13 +5,14 @@
 package Client;
 import java.io.DataOutputStream;
 import java.net.Socket;
+import java.util.Scanner;
 import javax.swing.*;
 
 /**
  *
  * @author Oscar M
  */
-public class Cliente extends javax.swing.JFrame {
+public class Jugador extends javax.swing.JFrame {
     
 private Socket cliente;
     private int puertoc;
@@ -19,7 +20,7 @@ private Socket cliente;
     private DataOutputStream salida;
     private String nombre;
   
-    public Cliente() {
+    public Jugador() {
         initComponents();
                try {
             nombre=JOptionPane.showInputDialog("su nombre");
@@ -38,7 +39,7 @@ private Socket cliente;
     public void mensajeria(String msg){
         this.jTextArea1.append(" "+msg+"\n");
     }
-    public Cliente(String nombre, String host, int puertoc){//constructor
+    public Jugador(String nombre, String host, int puertoc){//constructor
         this.nombre=nombre;
         this.host=host;
         this.puertoc=puertoc;
@@ -142,20 +143,28 @@ public void actualizarLista(DefaultListModel modelo){
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jugador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jugador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jugador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jugador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Cliente().setVisible(true);
+                Scanner entrada= new Scanner(System.in);
+                String nombre;
+                String host;
+                String puerto;
+                System.out.println("Ingrese su nombre");
+                nombre=entrada.nextLine();
+                System.out.println("Ingrese un host");
+                new Jugador().setVisible(true);
             }
         });
     }

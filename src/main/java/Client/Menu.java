@@ -4,6 +4,8 @@
  */
 package Client;
 
+import java.util.Scanner;
+
 /**
  *
  * @author rober
@@ -152,6 +154,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
+       
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void salirMenu(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirMenu
@@ -159,7 +162,12 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_salirMenu
 
     private void ingresarJuego(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresarJuego
-        // TODO add your handling code here:
+        String nombre;// TODO add your handling code here:
+        String host;
+        int puerto;
+        nombre=jTextField1.getText();
+        host=jTextField2.getText();
+        puerto=jTextField3.Integer;
     }//GEN-LAST:event_ingresarJuego
 
     /**
