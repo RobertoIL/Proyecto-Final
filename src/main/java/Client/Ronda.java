@@ -22,7 +22,7 @@ public interface Ronda {
     
     }
 
-    default boolean jugadorAdivina(Cliente j){//asignar rol a cliente
+    default boolean jugadorAdivina(Jugador j){//asignar rol a cliente
 
         
         return true;

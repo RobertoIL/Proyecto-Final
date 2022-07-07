@@ -171,7 +171,7 @@ public class Menu extends javax.swing.JFrame {
         nombre=jTextField1.getText();
         host=jTextField2.getText(); 
         puertoc=Integer.parseInt(jTextField3.getText());
-        new Cliente(nombre,host,puertoc);
+        new Jugador(nombre,host,puertoc);
     }//GEN-LAST:event_ingresarJuego
 
     /**
