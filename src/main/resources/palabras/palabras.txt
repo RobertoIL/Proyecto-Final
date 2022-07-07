@@ -1,0 +1,5 @@
+Arbol,
+Sol,
+Herramienta,
+Iglesia,
+Mascota,

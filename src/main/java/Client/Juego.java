@@ -6,7 +6,7 @@ import java.util.List;
 public class Juego {
 
 
-   // ArrayList<Jugador> jugadores = new ArrayList<>();
+   // ArrayList<Cliente> jugadores = new ArrayList<>();
     List<String> palabras = new ArrayList<>();
 
     public static void main(String[] args) {

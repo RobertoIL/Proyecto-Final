@@ -3,16 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Client;
+import java.awt.*;
 import java.io.DataOutputStream;
 import java.net.Socket;
-import java.util.Scanner;
 import javax.swing.*;
 
 /**
  *
  * @author rober
  */
-public class Client {
+public class Cliente extends Component {
     
     private Socket cliente;
     private int puerto;
@@ -20,7 +20,7 @@ public class Client {
     private DataOutputStream salida;
     private String nombre;
     
-    public Client(String nombre, String host, int puerto){
+    public Cliente(String nombre, String host, int puerto){
         try{
             cliente = new Socket(host, puerto);
             DataOutputStream salida = new DataOutputStream(cliente.getOutputStream());
@@ -32,6 +32,8 @@ public class Client {
             JOptionPane.showMessageDialog(this, e.toString());
         }
     }
+
+
     
     public void mensajeria(String msg){
         

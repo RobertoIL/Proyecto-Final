@@ -1,8 +1,10 @@
 package Client;
 
+import java.io.FileNotFoundException;
+
 public interface Ronda {
     String palabra = "";
-   // Jugador jugadorDibujante = null; //Jugador pasa a ser cliente 
+   // Cliente jugadorDibujante = null; //Cliente pasa a ser cliente
 
     default void iniciarRound(){//hilo
         //escoger palabra (del gson)
@@ -20,10 +22,16 @@ public interface Ronda {
     
     }
 
-    default boolean jugadorAdivina(){//asignar rol a cliente
-        
+    default boolean jugadorAdivina(Cliente j){//asignar rol a cliente
+
         
         return true;
+    }
+    default void generarPalabra(Juego j) throws FileNotFoundException {
+        String ruta = "src/main/resources/palabras/palabras.txt";
+
+
+
     }
 
 

@@ -1,7 +1,6 @@
 package Client;
 
 
-import Client.Jugador;
 import javax.swing.*;
 import java.io.DataInputStream;
 import java.io.IOException;
@@ -13,10 +12,10 @@ import java.util.logging.Logger;
 public class HiloCliente extends Thread {
 private Socket SocketCliente;
 private DataInputStream entrada;
-private Jugador jugador;
+private Cliente jugador;
 private ObjectInputStream entradaObjeto;
 
-public HiloCliente(Socket SocketCliente, Jugador cliente){
+public HiloCliente(Socket SocketCliente, Cliente cliente){
     this.SocketCliente=SocketCliente;
     this.jugador=cliente;
 }

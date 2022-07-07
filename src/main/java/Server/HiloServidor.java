@@ -3,8 +3,8 @@ package Server;
 import javax.swing.*;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
-import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
+import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Vector;
 
@@ -19,15 +19,13 @@ public class HiloServidor extends Thread {
     private ObjectOutputStream salidaObjeto;
 
 
-    public HiloServidor(Socket socketcliente, String nombre, Servidor serv) throws Exception{
+    public HiloServidor(ServerSocket socketcliente, String nombre, Servidor serv) throws Exception{
         this.Cliente=socketcliente;
-    this.server=serv;
-    this.nombre=nombre;
-    usuarioActivo.add(this);
+        this.server=serv;
+        this.nombre=nombre;
+        usuarioActivo.add(this);
 
-        for (int i = 0; i < usuarioActivo.size(); i++) {
-            usuarioActivo.get(i).enviosMensajes(nombre+"se ha conectado");
-        }
+
     }
     public void run(){
         String mensaje=" ";
