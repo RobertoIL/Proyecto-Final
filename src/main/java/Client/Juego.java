@@ -10,6 +10,10 @@ public class Juego {
     List<String> palabras = new ArrayList<>();
 
     public static void main(String[] args) {
+        
+        java.awt.EventQueue.invokeLater(() -> {
+            new Juegoform().setVisible(true);
+        });
 
         //menu
         //construye y el host listo
